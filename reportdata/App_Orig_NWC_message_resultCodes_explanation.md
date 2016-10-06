@@ -1,4 +1,4 @@
-# TU NWC App originated call dashboard
+# TU NWC App originated message dashboard
 
 The meaning of the different values provided in the dashboard are:
 
