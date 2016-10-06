@@ -1,16 +1,16 @@
 # Argentina reports
 
 ## TU originated call
-AR_outgoing_call_intro.md
+ * [TU App originated call](AR_outgoing_call_intro.md)
 
 ## TU terminated call
-AR_incoming_call_intro.md
+ * [TU App incoming call](AR_incoming_call_intro.md)
 
 ## TU originated message
-AR_app_originated_sms_intro.md
+  * [TU App originated message](AR_app_originated_sms_intro.md)
 
 ## TU terminated message
+ * [TU Incoming message]()
 
 ## Provisioning
-AR_provisioning_intro.md
-
+  * [TU Provisioning flow](AR_provisioning_intro.md)
