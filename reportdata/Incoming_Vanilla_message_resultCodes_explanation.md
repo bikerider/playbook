@@ -1,3 +1,5 @@
+# TU Incoming message
+
 The meaning of the different values provided in the dashboard are:
 
 * **%Vanilla_SMS_SIP_OK**: A incoming message was sent to a Vanilla user. The user has some application online and gBE tells gCOB to deliver the message by SIP protocol. TUCore answered with 200 OK to the message, so everything went OK.
