@@ -10,7 +10,7 @@ See [outgoing call troubleshootting tutorial](app_orig_call_troubleshooting.md).
 
 ## Incoming call troubleshootting
 
-See [incoming call troubleshootting tutorial](ancoming_call_troubleshooting.md).
+See [incoming call troubleshootting tutorial](incoming_call_troubleshooting.md).
 
 
 
