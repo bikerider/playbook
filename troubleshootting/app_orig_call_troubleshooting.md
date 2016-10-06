@@ -64,7 +64,7 @@ It should be checked:
    * _To header_: The number in the To header should be the E.164 normalized version of the dialed number (for the platform to include the communication record in the appropriate timeline of the user).
 * The INVITE gets to the SIP endpoint provided by the OB.
 
-  From gConnectOB version 1.2.7.1 on , we included the service to put a Comm-Reason header in the unsuccessful response from gCOB towards TUCore. In case the call received some unsuccessful response in the OB, that Comm-Reason header will contain the sip response that the OB equipment replied and the information provided by the OB in the Reason header.
+  From gConnectOB version 1.2.7.1 on, we included the service to put a Comm-Reason header in the unsuccessful response from gCOB towards TUCore. In case the call received some unsuccessful response in the OB, that Comm-Reason header will contain the SIP response that the OB equipment replied and the information provided by the OB in the Reason header. Note: This header is not available in Perú as in that country the outgoing calls does not traverse gConnectOB service.
 
   NOTE: If there is no SIP Reason header received from the OB, Comm-Reason header will contain just the cause parameter.
 
