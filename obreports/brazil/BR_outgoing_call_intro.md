@@ -2,7 +2,7 @@
 
 ## App Originated Call Evolution in Brazil
 
-[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA){:target="_blank"}
+[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA)
 
 {% include Embed_TEEN_Outgoing_conversion_BRA.html %}
 {% markdown App_originated_call_conversion_explanation.md %}
@@ -38,7 +38,7 @@ Historical areas with problems are "8X and 9X" ('remote' areas with bad satellit
 
 ## gCOB CDRs for App Originated calls in Brazil
 
-[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs){:target="_blank"}
+[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs)
 
 {% include Embed_TEEN_BR_Outgoing_call_CDRs.html %}
 
@@ -48,8 +48,7 @@ Historical areas with problems are "8X and 9X" ('remote' areas with bad satellit
 ## gCOB CDRs for App Originated calls in Brazil PER AREA
 
 [Link to dashboard based on IP](
-https://10.253.1.11/en-US/app/tugo/report?sid=1465568521.1238823.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BRA_CDRs_Outgoing_Call_per_area){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465568521.1238823.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BRA_CDRs_Outgoing_Call_per_areaen-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs){:target="_blank"}
+https://10.253.1.11/en-US/app/tugo/report?sid=1465568521.1238823.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BRA_CDRs_Outgoing_Call_per_area) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465568521.1238823.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BRA_CDRs_Outgoing_Call_per_areaen-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs)
 
 {% include Embed_TEEN_BRA_CDRs_Outgoing_Call_per_area.html %}
-
 As we've explained, there's a difference in Brazil for the different areas and the data has to be examined per Area basis.
