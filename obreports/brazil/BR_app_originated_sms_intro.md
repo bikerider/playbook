@@ -1,14 +1,8 @@
----
-title: Brazil App originated SMS flow
-keywords: Brazil
-summary: "This page contains the relevant information about App originated SMS flow in Brazil"
-sidebar: opsPB_sidebar
-permalink: /BR_app_originated_SMS_intro/
----
+# TU App originated message, Brazil
 
 **IMPORTANT**: Note that the gCOB runlog files are sent to Splunk once they are completed. This means the data from the last days could be not complete (until the files get to 21Mb). In App originated message flows, where there are few logs written, this effect can be noticeable.
 
-## Outgoing VANILLA message CDR result
+## TU App originaged message CDR result
 
 The following dashboards can be used to monitor the performance of the Vanilla app originated messages in Brazil deployment.
 
