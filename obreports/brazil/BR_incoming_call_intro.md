@@ -6,7 +6,7 @@
 
 The following dashboards can be used to monitor the performance of the incoming call in Brazil deployment.
 
-[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes){:target="_blank"}
+[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes)
 
 {% include Embed_TEEN_BR_Incoming_call_CDRs_resultcodes.html %}
 
@@ -16,7 +16,7 @@ The following dashboards can be used to monitor the performance of the incoming 
 
 The following dashboard can be used to monitor the performance of the dispatchs coming from gBE to gCOB in the incoming call in Brazil deployment.
 
-[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs){:target="_blank"}
+[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs)
 
 {% include Embed_TEEN_BR_Incoming_Call_delayed_dispatchs.html %}
 
