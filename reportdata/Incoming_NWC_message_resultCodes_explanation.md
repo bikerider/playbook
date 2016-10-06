@@ -1,3 +1,4 @@
+# TU NWC Incoming message dashboard
 The meaning of the different values provided in the dashboard are:
 
 * **%NWC_SMS_SIP_OK**: A incoming message was sent to a NWC user. The user has some application online and gBE tells gCOB to deliver the message by SIP protocol. TUCore answered with 200 OK to the message, so everything went OK.
