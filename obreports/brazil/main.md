@@ -1,8 +1,5 @@
 # Brazil reports
 
-## Introduction
- * [Introduction](BR_intro.md)
-
 ## TU originated call
  * [TU App originated call](BR_outgoing_call_intro.md)
 
