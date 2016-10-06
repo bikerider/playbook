@@ -4,7 +4,7 @@ Welcome to Operations Playbook. You will find here useful information for operat
 Hope you enjoy the journey!!!
 
 ## Troubleshooting procedures
-See [troubleshootting](troubleshooting/main.md) documentation.
+See [troubleshootting](troubleshootting/main.md) documentation.
 
 ## Understanding report data
 See [report data](reportdata/main.md) documentation.
