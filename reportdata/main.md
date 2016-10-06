@@ -6,7 +6,6 @@
 ## TU originated call flows
  * [TU App originated call](App_Orig_call_resultCodes_explanation.md)
  * [TU App originated call conversion explanation](App_originated_call_conversion_explanation.md)
- * [TU NWC App originated call](App_Orig_NWC_message_resultCodes_explanation.md) 
  
 ## TU terminated call flows
  * [TU App incoming call](Incoming_call_resultCodes_explanation.md)
