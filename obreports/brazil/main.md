@@ -13,6 +13,7 @@
 
 ## TU terminated message
  * [TU Incoming message](BR_incoming_sms_intro.md)
+ * [TU NWC Incoming message](BR_NWC_incoming_sms_intro.md)
 
 ## Provisioning
   * [TU Provisioning flow](BR_provisioning_intro.md)
