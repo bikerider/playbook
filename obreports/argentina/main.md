@@ -4,7 +4,7 @@
  * [TU App originated call](AR_outgoing_call_intro.md)
 
 ## TU terminated call
- * [TU App incoming call](AR_incoming_call_intro.md)
+ * [TU incoming call](AR_incoming_call_intro.md)
 
 ## TU originated message
   * [TU App originated message](AR_app_originated_sms_intro.md)
