@@ -1,4 +1,4 @@
-# TU NSC Incoming message, Brazil
+# TU NWC Incoming message, Brazil
 
 **IMPORTANT**: Note that the gCOB runlog files are sent to Splunk once they are completed. This means the data from the last days could be not complete (until the files get to 21Mb in gCOB).
 
