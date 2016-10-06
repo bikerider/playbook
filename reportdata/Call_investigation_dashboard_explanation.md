@@ -1,3 +1,5 @@
+# Call investigation dashboard
+
 In this dashboard, with the callSessionID for the specific call (that can be obtained in Voipmonitor), you can check:
 
 * The summary of the call, containing calling and called numbers, gBE action, etc.
