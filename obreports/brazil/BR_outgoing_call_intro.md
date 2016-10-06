@@ -1,36 +1,23 @@
----
-title: Brazil outgoing call flow
-keywords: Brazil
-summary: "This page contains the relevant information about Outgoing call flow in Brazil"
-sidebar: opsPB_sidebar
-permalink: /BR_outgoing_call_intro/
----
-
-## App Originated Call Introduction
-  This section describes the recommended actions to monitor and debug scenarios for app originated calls in Brazil deployment.
-## App Originated Call Monitoring
-  The following splunk dashboards are the main source of monitoring:
+# TU App originated call flow, Brazil
 
 ## App Originated Call Evolution in Brazil
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA){:target="_blank"}
 
 {% include Embed_TEEN_Outgoing_conversion_BRA.html %}
-
 {% markdown App_originated_call_conversion_explanation.md %}
 
 ## App Originated Call in Brazil
 
-[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d){:target="_blank"} / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d){:target="_blank"}
+[Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d)
 
- It is important to note that in Brazil the areas are **very relevant** for network performance. Areas are the 2 digits after the *CountryCode*. Relevant areas are:
+It is important to note that in Brazil the areas are **very relevant** for network performance. Areas are the 2 digits after the *CountryCode*. Relevant areas are:
 
 * **11**: Sao Paulo.
 * **21**: Rio de Janeiro
 * **31**: Minas Gerais
 
 Historical areas with problems are "8X and 9X" ('remote' areas with bad satellite connections, big delays, etc.)
-
 
 *Parameters to review:*
 
@@ -42,7 +29,6 @@ Historical areas with problems are "8X and 9X" ('remote' areas with bad satellit
 * **4b Outbound leg 480** should be < 15-20% (users not reachable).
 * **4a , 4c, 4d, 4e** should be < 3-5%
 * **4g Outbound leg cancel** should be < 25-30% (for NWC it's higher because the client has smaller timeout: around 30-35%)
-
 
 *Parameters of the dashboard:*
 
