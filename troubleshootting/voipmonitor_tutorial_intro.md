@@ -26,7 +26,7 @@ Steps to troubleshoot a call using the VoipMonitor tool are the following:
 ![VoipMonitor calls](images/Voipmon_calls_page.png)
 
 7. Then we can use the following tabs in the details of the call.
-![VoipMonitor call tabs](/opsPB/images/Voipmon_call_tabs.png)
+![VoipMonitor call tabs](images/Voipmon_call_tabs.png)
   * *Summary*: contains a summary of the call, with media information, calling and called numbers, etc.
   * *SIP: history* shows a graph representation of the SIP and HTTP requests for that call.
   ![VoipMonitor call sip details](images/Voipmon_call_sipDetails.png)
