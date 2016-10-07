@@ -1,8 +1,8 @@
-# Incoming Call troubleshooting procedure
+# INCOMING CALL TROUBLESHOOTING PROCEDURE
 
 This document describes the basic operations troubleshooting procedure for the incoming call scenarios.
 
-## Massive problems in incoming call flow
+## MASSIVE ISSUES
 
 ### ASR decrease / TUCore incoming calls decrease
 
@@ -52,7 +52,7 @@ In case calls are failing in the OB, we have 2 sources of data to analyze what i
 
    **Pending how to get that information from Splunk or Voipmonitor**
 
-## Single call/user investigations
+## SINGLE CALL USER ISSUES
 
  When troubleshooting specific calls, these are the steps that can be followed:
 
