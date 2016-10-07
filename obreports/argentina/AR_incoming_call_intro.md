@@ -12,7 +12,7 @@ The following dashboard can be used to monitor the performance of the incoming c
 Example:
 ![Embed_TEEN_AR_Outgoing_call_CDR_results](images/Embed_TEEN_AR_Outgoing_call_CDR_results.png)
 
-See also Incoming_call_resultCodes_explanation.md
+See also [Incoming call Result Codes explanation](../../reportdata/Incoming_call_resultCodes_explanation.md) 
 
 ## Incoming call gBE delayed dispatchs
 
