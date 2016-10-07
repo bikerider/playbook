@@ -2,7 +2,7 @@
 
 This document describes the basic operations troubleshooting procedure for the app originated flow. It describes briefly the proposed checks to be done for massive and single customer/call issues.
 
-## Massive problems in incoming call flow
+## Massive problems in Outgoing call flow
 
 ### ASR decrease/ non successful responses increase
 
