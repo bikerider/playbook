@@ -9,10 +9,9 @@ The following dashboards can be used to monitor the performance of the incoming 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes)
 
-{% include Embed_TEEN_AR_Incoming_call_CDRs_resultcodes.html %}
-<iframe height="461" style="width: 100%; border: none" src="https://10.253.1.11/en-US/embed?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes&oid=AWzukYmcNUhpi4ntaylBHBz3WHoRPk8GEK_SQuVDMRLxIP1xSO%5EL5kUQ9XRjb_1K6fY_0IX1UW62YtP2uDFtDdaij7C6PXvcOgF6vtC3talIWNEOczFf1820tNAXbEr%5EiMszBIGNGHNPeeTmhfyKaEm0yU3fDgb6MdYBlH_dsrwJf61e"></iframe>
+Example:
 
-{% markdown Incoming_call_resultCodes_explanation.md %}
+See also Incoming_call_resultCodes_explanation.md
 
 ## Incoming call gBE delayed dispatchs
 
