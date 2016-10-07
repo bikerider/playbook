@@ -1,8 +1,8 @@
-# Application Originated Call troubleshooting procedure
+# APPLICATION ORIGINATED CALL TROUBLESHOOTING PROCEDURE
 
 This document describes the basic operations troubleshooting procedure for the app originated flow. It describes briefly the proposed checks to be done for massive and single customer/call issues.
 
-## Massive problems in Outgoing call flow
+## MASSIVE ISSUES
 
 ### ASR decrease/ non successful responses increase
 
@@ -11,7 +11,7 @@ Note: In some countries (currently **Brazil**), it is required to do the analysi
 
 The proposed troubleshooting procedure is the following one:
 
-#### AOC Massive Troubleshootting Step 1 -> Check if calls are getting to the OB or not.
+#### STEP 1 -> Check if calls are getting to the OB or not.
 
 First thing to do is to check this dashboard:
 
@@ -25,7 +25,7 @@ If the **2. Outbound leg from TU Core** parameter is high *(>98-99%)* or not:
    * If the calls are not getting to the OB, there has to be a problem in TUCore platform (BES) or in some SBC (routing problem?).
    * If the calls are getting to the OB, go to [next step](#aoc_ts_2-check-why-calls-are-failing-in-the-ob).
 
-####  AOC Massive Troubleshootting Step 2 -> Check why calls are failing in the OB
+####  Step 2 -> Check why calls are failing in the OB
 
 In case calls are failing in the OB, we have 2 sources of data to analyze what is going on:
 
@@ -47,11 +47,11 @@ In case calls are failing in the OB, we have 2 sources of data to analyze what i
 
    **Pending how to get that information from Splunk or Voipmonitor**
 
-## Single call/user investigations
+## SINGLE CALL/USER ISSUES
 
- When troubleshooting specific calls, these are the steps that can be followed:
+When troubleshooting specific calls, these are the steps that can be followed:
 
-#### AOC_SingleUserTroubleshooting_step_1
+#### STEP 1
 
 For the app originated flow, the first place to review the call is Voipmonitor [IP Based link](http://10.253.0.169/index.php) / [URL Based link](http://voipmonitor/index.php).
 
@@ -88,7 +88,7 @@ It should be checked:
 
    The format of the reason header in SIP can be checked [here](https://tools.ietf.org/html/rfc3326)
 
-#### AOC_SingleUserTroubleshooting_step_2
+#### STEP 2
 
 In case the call is getting to the OB and we can't identify the reason, you can check the **Call investigations v2** dashboard [Latam IP Based link](https://10.253.1.11/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now) / [Latam URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now) / [UK IP Based link](https://10.253.0.167/en-US/app/tugo/call_investigations?earliest=-24h%40h&latest=now) / [UK URL Based link](https://ldn-splunk.tefcomms.com/en-US/app/tugo/call_investigations?earliest=-24h%40h&latest=now)
 
