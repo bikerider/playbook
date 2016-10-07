@@ -18,6 +18,12 @@ First thing to do is to check this dashboard:
 * Latam dashboard [based on IP](https://10.253.1.11/en-US/app/tugo/outgoing_call_conversion?earliest=0&latest=) or [based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/outgoing_call_conversion?earliest=0&latest=).
 * UK dashboard [based on IP](https://10.253.0.167/en-US/app/tugo/outgoing_call_conversion?earliest=0&latest=) or [based on URL](https://ldn-splunk.tefcomms.com/en-US/app/tugo/outgoing_call_conversion?earliest=0&latest=).
 
+The following figure shows a screenshot of this dashboard for a particular country:
+
+![Troubleshooting Outgoing Call Conversion](images/Troubleshooting_OutgoingCallConversion.png)
+
+
+
 If the **2. Outbound leg from TU Core** parameter is high *(>98-99%)* or not:
 
 * **If the percentage of Outbound leg is low for that  OB** this means that *there's probably a problem bewteen the Freeswitchs in TUCore and gBE*.
