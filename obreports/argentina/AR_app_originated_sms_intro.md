@@ -8,5 +8,6 @@ The following dashboards can be used to monitor the performance of the Vanilla a
 
 [Link to dashboard based on IP]() / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com)
 
-{% markdown App_Orig_Vanilla_message_resultCodes_explanation.md %}
+See also [TU originated message Result Codes explanation](images/App_Orig_Vanilla_message_resultCodes_explanation.md)
+
 
