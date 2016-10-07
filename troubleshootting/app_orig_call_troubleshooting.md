@@ -7,11 +7,11 @@ This document describes the basic operations troubleshooting procedure for the a
 ### ASR decrease/ non successful responses increase
 
 The typical problem in app originated call flow will be that a lower number of calls are responded by the users.
-**It is important to note that for Brazil, it is required to do the analysis of the ASR PER AREA OF THE CALLING NUMBER.**
+Note: In some countries (currently **Brazil**), it is required to do the analysis of the ASR PER AREA OF THE CALLING NUMBER.
 
 The proposed troubleshooting procedure is the following one:
 
-#### AOC_MassiveTroubleshooting_step_1 Check if calls are getting to the OB or not.
+#### AOC Massive Troubleshootting Step 1 -> Check if calls are getting to the OB or not.
 
 First thing to do is to check this dashboard:
 
@@ -25,7 +25,7 @@ If the **2. Outbound leg from TU Core** parameter is high *(>98-99%)* or not:
    * If the calls are not getting to the OB, there has to be a problem in TUCore platform (BES) or in some SBC (routing problem?).
    * If the calls are getting to the OB, go to [next step](#aoc_ts_2-check-why-calls-are-failing-in-the-ob).
 
-#### AOC_MassiveTroubleshooting_step_2 Check why calls are failing in the OB
+####  AOC Massive Troubleshootting Step 2 -> Check why calls are failing in the OB
 
 In case calls are failing in the OB, we have 2 sources of data to analyze what is going on:
 
