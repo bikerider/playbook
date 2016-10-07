@@ -11,7 +11,7 @@ The following dashboards can be used to monitor the performance of the incoming 
 Example:
 ![Embed_TEEN_BR_Incoming_call_CDRs_resultcodes](images/Embed_TEEN_BR_Incoming_call_CDRs_resultcodes.png)
 
-See also {% markdown Incoming_call_resultCodes_explanation.md %}
+See also [Incoming call Result Codes explanation](../../reportdata/Incoming_call_resultCodes_explanation.md) 
 
 ## Incoming call gBE delayed dispatchs
 
