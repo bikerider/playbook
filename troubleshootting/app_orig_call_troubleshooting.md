@@ -33,7 +33,7 @@ Check if the value of parameter **2. Outbound leg from TU Core** is high *(>98-9
 
 In case calls are failing in the OB, we have 2 sources of data to analyze what is going on:
 
-1. **gConnectOB runlogs and CDRs**: we can try to analyze what has changed querying in splunk for gCOB data:
+1. **gConnectOB runlogs and CDRs**: we can try to analyze what has changed by querying in splunk for gCOB data:
 
    * Query for CDR result for outgoing calls in Brazil for all the areas [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01).
 
