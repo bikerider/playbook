@@ -5,16 +5,13 @@
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=andresp__andresp__tugo__search3_1465487491.1181709.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_Outgoing_conversion_BRA)
 
 Example:
-{% include Embed_TEEN_Outgoing_conversion_BRA.html %}
+![Embed_TEEN_Outgoing_conversion_BRA](images/Embed_TEEN_Outgoing_conversion_BRA.png)
 
-See also App_originated_call_conversion_explanation.md
+See also [TU App originated call conversion explanation](../../reportdata/App_originated_call_conversion_explanation.md)
 
 ## App Originated Call in Brazil
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/br__outgoing_call_by_area?earliest=-1d%40d&latest=%40d&form.code_digits=\d)
-
-Example:
-FIGURE
 
 It is important to note that in Brazil the areas are **very relevant** for network performance. Areas are the 2 digits after the *CountryCode*. Relevant areas are:
 
@@ -46,10 +43,9 @@ Historical areas with problems are "8X and 9X" ('remote' areas with bad satellit
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465567692.1238236.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Outgoing_call_CDRs)
 
 Example:
+![Embed_TEEN_BR_Outgoing_call_CDRs](images/Embed_TEEN_BR_Outgoing_call_CDRs.png)
 
-{% include Embed_TEEN_BR_Outgoing_call_CDRs.html %}
-
-See also App_Orig_call_resultCodes_explanation.md
+See also [TU App originated call Result Codes explanation](../../reportdata/App_Orig_call_resultCodes_explanation.md)
 
 
 ## gCOB CDRs for App Originated calls in Brazil PER AREA
@@ -60,6 +56,7 @@ https://10.253.1.11/en-US/app/tugo/report?sid=1465568521.1238823.mia-spl-sch02&s
 As we've explained, there's a difference in Brazil for the different areas and the data has to be examined per Area basis.
 
 Example:
-{% include Embed_TEEN_BRA_CDRs_Outgoing_Call_per_area.html %}
+![Embed_TEEN_BRA_CDRs_Outgoing_Call_per_area](images/Embed_TEEN_BRA_CDRs_Outgoing_Call_per_area.png)
+
 
 
