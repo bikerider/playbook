@@ -45,9 +45,9 @@ In case calls are failing in the OB, we have 2 sources of data to analyze what i
 
    * Query for CDR result in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362151.273731.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362151.273731.mia-spl-sch01).
  
-```python
-sourcetype="CDR-gOB_AR" "CallType=\"outgoing" | timechart span=1h count by CallResult
-```
+  ```
+  sourcetype="CDR-gOB_AR" "CallType=\"outgoing" | timechart span=1h count by CallResult
+  ```
  
 >  sourcetype="CDR-gOB_AR" "CallType=\"outgoing" | timechart span=1h count by CallResult
 
