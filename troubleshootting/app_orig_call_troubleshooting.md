@@ -7,7 +7,7 @@ This document describes the basic operations troubleshooting procedure for the a
 ### ASR decrease/ non successful responses increase
 
 The typical problem in app originated call flow will be that a lower number of calls are responded by the users.
-Note: In some countries (currently **Brazil**), it is required to do the analysis of the ASR PER AREA OF THE CALLING NUMBER.
+Note: In some countries (currently **Brazil**), it is required to do the analysis of the ASR per area of the calling number.
 
 The proposed troubleshooting procedure is the following one:
 
