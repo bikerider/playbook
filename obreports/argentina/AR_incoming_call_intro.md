@@ -5,7 +5,7 @@
 
 ## Incoming call CDR result
 
-The following dashboards can be used to monitor the performance of the incoming call in Argentina deployment.
+The following dashboard can be used to monitor the performance of the incoming call in Argentina deployment.
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes)
 
