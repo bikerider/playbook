@@ -8,9 +8,10 @@ The following dashboards can be used to monitor the performance of the incoming 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465921356.64584.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes)
 
-{% include Embed_TEEN_BR_Incoming_call_CDRs_resultcodes.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_CDRs_resultcodes](images/Embed_TEEN_BR_Incoming_call_CDRs_resultcodes.png)
 
-{% markdown Incoming_call_resultCodes_explanation.md %}
+See also {% markdown Incoming_call_resultCodes_explanation.md %}
 
 ## Incoming call gBE delayed dispatchs
 
@@ -18,7 +19,8 @@ The following dashboard can be used to monitor the performance of the dispatchs 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1465923552.66204.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_Call_delayed_dispatchs)
 
-{% include Embed_TEEN_BR_Incoming_Call_delayed_dispatchs.html %}
+Example:
+![Embed_TEEN_BR_Incoming_Call_delayed_dispatchs](images/Embed_TEEN_BR_Incoming_Call_delayed_dispatchs.png)
 
 ## Incoming call Voicemail diversion errors
 
@@ -26,7 +28,8 @@ The following dashboard can be used to monitor the performance of the voicemail 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466000536.105914.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_VM_errors) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466000536.105914.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_VM_errors)
 
-{% include Embed_TEEN_BR_Incoming_call_VM_errors.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_VM_errors](images/Embed_TEEN_BR_Incoming_call_VM_errors.png)
 
 ## Incoming call Voicemail diversion errors per Area
 
@@ -34,7 +37,8 @@ The following dashboard can be used to monitor the performance of the voicemail 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466002080.107849.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_VM_errors_per_area) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466002080.107849.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_VM_errors_per_area)
 
-{% include Embed_TEEN_BR_Incoming_call_VM_errors_per_area.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_VM_errors_per_area.html](images/Embed_TEEN_BR_Incoming_call_VM_errors_per_area.png)
 
 ## Incoming call Domain Transfer failures
 
@@ -42,7 +46,8 @@ The following dashboard can be used to monitor the performance of the domain tra
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466004194.110585.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466004194.110585.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors)
 
-{% include Embed_TEEN_BR_Incoming_call_Domain_transfer_errors.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_Domain_transfer_errors](images/Embed_TEEN_BR_Incoming_call_Domain_transfer_errors.png)
 
 ## Incoming call Domain Transfer failures per area
 
@@ -50,8 +55,8 @@ The following dashboard can be used to monitor the performance of the domain tra
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466007331.114326.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors_per_area) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466007331.114326.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors_per_area)
 
-{% include Embed_TEEN_BR_Incoming_call_Domain_transfer_errors_per_area.html %}
-
+Example:
+![Embed_TEEN_BR_Incoming_call_Domain_transfer_errors_per_area](images/Embed_TEEN_BR_Incoming_call_Domain_transfer_errors_per_area.png)
 
 ## Incoming call RBT MAP query delay Percentile 95
 
@@ -59,7 +64,8 @@ The following dashboard can be used to monitor the performance of the Map query 
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466007996.115045.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_RBT_MAP_query_response_time) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466007996.115045.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_RBT_MAP_query_response_time)
 
-{% include Embed_TEEN_BR_Incoming_call_RBT_MAP_query_response_time.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_RBT_MAP_query_response_time](images/Embed_TEEN_BR_Incoming_call_RBT_MAP_query_response_time.png)
 
 ## Incoming call Domain Transfer Delay Percentile 80 per area
 
@@ -67,4 +73,6 @@ The following dashboard can be used to monitor the performance of the domain tra
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466008997.116065.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466008997.116065.mia-spl-sch01&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area)
 
-{% include Embed_TEEN_BR_Incoming_call_Domain_tranfer_delay_per_area.html %}
+Example:
+![Embed_TEEN_BR_Incoming_call_Domain_tranfer_delay_per_area](images/Embed_TEEN_BR_Incoming_call_Domain_tranfer_delay_per_area.png)
+
