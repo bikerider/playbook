@@ -22,14 +22,12 @@ The following figure shows a screenshot of this dashboard for a particular count
 
 ![Troubleshooting Outgoing Call Conversion](images/Troubleshooting_OutgoingCallConversion.png)
 
+Check if the value of parameter **2. Outbound leg from TU Core** is high *(>98-99%)* or not:
 
-
-If the **2. Outbound leg from TU Core** parameter is high *(>98-99%)* or not:
-
-* **If the percentage of Outbound leg is low for that  OB** this means that *there's probably a problem bewteen the Freeswitchs in TUCore and gBE*.
-* **If the percentage of Outbound leg is high** this discards problems in gBE and TUCore's Freeswitchs. In this case we will have to check deeper in Voipmonitor statistics which error code increased and analyze some samples.
-   * If the calls are not getting to the OB, there has to be a problem in TUCore platform (BES) or in some SBC (routing problem?).
-   * If the calls are getting to the OB, go to [next step](#aoc_ts_2-check-why-calls-are-failing-in-the-ob).
+* **If the value is low for that  OB** this means that *there's probably a problem bewteen the FreeSwitchs in TUCore and gBE*.
+* **If the value is high** this discards problems in gBE and TUCore's FreeSwitchs. In this case we will have to check deeper in Voipmonitor statistics which error code increased and analyze some samples.
+   * If the calls are not getting to the OB, there has to be a problem in TUCore platform (BES) or in some SBC (routing problem, other).
+   * If the calls are getting to the OB, go to next step.
 
 ####  Step 2 -> Check why calls are failing in the OB
 
@@ -50,7 +48,6 @@ In case calls are failing in the OB, we have 2 sources of data to analyze what i
    * Query for CDR result codes in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362444.274001.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362444.274001.mia-spl-sch01).
 
 2. **Comm-reason header in SIP responses**:
-
    **Pending how to get that information from Splunk or Voipmonitor**
 
 ## SINGLE CALL/USER ISSUES
