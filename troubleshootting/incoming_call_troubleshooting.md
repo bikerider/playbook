@@ -10,7 +10,7 @@ The typical problem in incoming call flow is that there is a decrease in the inc
 
 The proposed troubleshooting procedure is the following one:
 
-#### IC_MassiveTroubleshooting_step_1 Check if calls are getting to gCOB or not.
+#### STEP 1 -> Check if calls are getting to the OB or not.
 
 Although **unfortunately we don't have 'real-time' gCOB runlogs/CDRs in most of the OBs**, first thing we should check is what is the status of the incoming calls reaching gCOB. Depending on the OB, we can do the following Splunk search for the last days:
 
@@ -30,37 +30,60 @@ If the **2. Outbound leg from TU Core** parameter is high *(>98-99%)* or not:
    * If the calls are not getting to the OB, there has to be a problem in TUCore platform (BES) or in some SBC (routing problem?).
    * If the calls are getting to the OB, go to [next step](#aoc_ts_2-check-why-calls-are-failing-in-the-ob).
 
-#### AOC_MassiveTroubleshooting_step_2 Check why calls are failing in the OB
+####  Step 2 -> Check why calls are failing in the OB
 
 In case calls are failing in the OB, we have 2 sources of data to analyze what is going on:
 
-1. **gConnectOB runlogs and CDRs**: we can try to analyze what has changed querying in splunk for gCOB data:
+1. **gConnectOB runlogs and CDRs**: we can try to analyze what has changed by querying in splunk for gCOB data:
 
-   * Query for CDR result for outgoing calls in Brazil for all the areas [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01)
+   * Query for CDR result for outgoing calls in Brazil for all the areas [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842182.1189765.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842182.1189765.mia-spl-sch01)  
+     
+    ```      
+   sourcetype="CDR-gOB_BR" "CallType=\"outgoing" |  rex "CallingParty=\"0055(?<calling_area>\d{2})\d*" | timechart span=1h count by CallResult
+    ```   
+    
+   * Query for CDR result in Brazil for an specific area (54 in the example) [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20where%20calling_area%3D54%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842405.1189969.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com//en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20where%20calling_area%3D54%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842405.1189969.mia-spl-sch01).
+   
+   ``` 
+   sourcetype="CDR-gOB_BR" "CallType=\"outgoing" |  rex "CallingParty=\"0055(?<calling_area>\d{2})\d*" | where calling_area=54 | timechart span=1h count by CallResult
+  ``` 
 
-   * Query for CDR result in Brazil for an specific area (54 in the example) [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20where%20calling_area%3D54%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20where%20calling_area%3D54%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464361705.273182.mia-spl-sch01)
+   * Query for CDR result codes in whole Brazil [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842503.1189976.mia-spl-sch01) / [URL Based link ](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842503.1189976.mia-spl-sch01).
+   
+    ```   
+    sourcetype="CDR-gOB_BR" "CallType=\"outgoing" | rex "(?<myResult>Success=\"\w+\";ResultCode=\"\d+\")" |  timechart span=1h count by myResult
+    ```
 
-   * Query for CDR result codes in whole Brazil [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362657.274131.mia-spl-sch01) / [URL Based link ](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362657.274131.mia-spl-sch01)
-
-   * Query for CDR result codes in some area (54 in the example) Brazil [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20where%20calling_area%3D54%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362785.274320.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR%20-%20gOB_BR%22%20%22CallType%3D\%22outgoing%22%20%7C%20%20rex%20%22CallingParty%3D\%220055%28%3F%3Ccalling_area%3E\d\d%29\d*%22%20%7C%20where%20calling_area%3D54%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=-30d%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362785.274320.mia-spl-sch01)
-
-   * Query for CDR result in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362151.273731.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362151.273731.mia-spl-sch01)
-
-   * Query for CDR result codes in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362444.274001.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?earliest=-7d%40d&latest=now&q=search%20sourcetype%3D%22CDR%20-%20gOB_AR%22%20%22CallType%3D\%22outgoing%22%20%7C%20rex%20%22%28%3F%3CmyResult%3ESuccess%3D\%22[^\%22]*\%22%3BResultCode%3D\%22\d*\%22%29%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&display.page.search.tab=visualizations&display.general.type=visualizations&sid=1464362444.274001.mia-spl-sch01)
-
+   * Query for CDR result codes in some area (54 in the example) Brazil [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20where%20calling_area%3D54%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842556.1190097.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_BR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22CallingParty%3D%5C%220055(%3F%3Ccalling_area%3E%5Cd%7B2%7D)%5Cd*%22%20%7C%20where%20calling_area%3D54%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842556.1190097.mia-spl-sch01).
+   
+    ```   
+    sourcetype="CDR-gOB_BR" "CallType=\"outgoing" | rex "CallingParty=\"0055(?<calling_area>\d{2})\d*" | where calling_area=54 | rex "(?<myResult>Success=\"\w+\";ResultCode=\"\d+\")" |  timechart span=1h count by myResult
+    ```
+    
+   * Query for CDR result in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_AR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842603.1190183.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_AR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20timechart%20span%3D1h%20count%20by%20CallResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842603.1190183.mia-spl-sch01).
+ 
+    ```
+    sourcetype="CDR-gOB_AR" "CallType=\"outgoing" | timechart span=1h count by CallResult
+    ```
+ 
+   * Query for CDR result codes in Argentina [IP Based link](https://10.253.1.11/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_AR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842637.1190207.mia-spl-sch01) / [URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/search?q=search%20sourcetype%3D%22CDR-gOB_AR%22%20%22CallType%3D%5C%22outgoing%22%20%7C%20rex%20%22(%3F%3CmyResult%3ESuccess%3D%5C%22%5Cw%2B%5C%22%3BResultCode%3D%5C%22%5Cd%2B%5C%22)%22%20%7C%20timechart%20span%3D1h%20count%20by%20myResult&earliest=%40d&latest=now&display.page.search.mode=fast&display.page.search.tab=visualizations&display.general.type=visualizations&dispatch.sample_ratio=1&sid=1475842637.1190207.mia-spl-sch01).
+   
+    ```
+  sourcetype="CDR-gOB_AR" "CallType=\"outgoing" | rex "(?<myResult>Success=\"\w+\";ResultCode=\"\d+\")" | timechart span=1h count by myResult
+    ```
+    
 2. **Comm-reason header in SIP responses**:
-
    **Pending how to get that information from Splunk or Voipmonitor**
+   
+## SINGLE CALL/USER ISSUES
 
-## SINGLE CALL USER ISSUES
+When troubleshooting specific calls, these are the steps that can be followed:
 
- When troubleshooting specific calls, these are the steps that can be followed:
-
-#### AOC_SingleUserTroubleshooting_step_1
+#### STEP 1
 
 For the app originated flow, the first place to review the call is Voipmonitor [IP Based link](http://10.253.0.169/index.php) / [URL Based link](http://voipmonitor/index.php).
 
-A basic manual for this tool can be found [here]({{site.baseurl}}/Voipmonitor_tutorial_intro/).
+A basic manual for this tool can be found [here](voipmonitor_tutorial_intro.md).
 
 It should be checked:
 
@@ -69,7 +92,7 @@ It should be checked:
    * _To header_: The number in the To header should be the E.164 normalized version of the dialed number (for the platform to include the communication record in the appropriate timeline of the user).
 * The INVITE gets to the SIP endpoint provided by the OB.
 
-  From gConnectOB version 1.2.7.1 on , we included the service to put a Comm-Reason header in the unsuccessful response from gCOB towards TUCore. In case the call received some unsuccessful response in the OB, that Comm-Reason header will contain the sip response that the OB equipment replied and the information provided by the OB in the Reason header.
+  From gConnectOB version 1.2.7.1 on, we included the service to put a Comm-Reason header in the unsuccessful response from gCOB towards TUCore. In case the call received some unsuccessful response in the OB, that Comm-Reason header will contain the SIP response that the OB equipment replied and the information provided by the OB in the Reason header. Note: This header is not available in Perú as in that country the outgoing calls does not traverse gConnectOB service.
 
   NOTE: If there is no SIP Reason header received from the OB, Comm-Reason header will contain just the cause parameter.
 
@@ -81,8 +104,8 @@ It should be checked:
 >  Reason: Q.850;cause=127;text="Interworking, unspecified"
 
  The Comm-Reason will have the following format
-
-> Comm-Reason: OB;cause=xxx;text="Interworking, unspecified"; rcvdCause="127";rcvdProtocol="Q.850";
+ 
+ > Comm-Reason: OB;cause=xxx;text="Interworking, unspecified"; rcvdCause="127";rcvdProtocol="Q.850";
 
   where:
 
@@ -91,11 +114,9 @@ It should be checked:
    * *rcvdCause=* will contain the value of the cause field in original Reason
    * *rcvdProtocol=* will contain the protocol value after the Reason header.
 
-   The format of the reason header in SIP can be checked [here](https://tools.ietf.org/html/rfc3326).
+   The format of the reason header in SIP can be checked [here](https://tools.ietf.org/html/rfc3326)
 
-
-#### AOC_SingleUserTroubleshooting_step_2
-
+#### STEP 2
 
 In case the call is getting to the OB and we can't identify the reason, you can check the **Call investigations v2** dashboard [Latam IP Based link](https://10.253.1.11/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now) / [Latam URL Based link](https://mia-splunk.tefcomms.com/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now) / [UK IP Based link](https://10.253.0.167/en-US/app/tugo/call_investigations?earliest=-24h%40h&latest=now) / [UK URL Based link](https://ldn-splunk.tefcomms.com/en-US/app/tugo/call_investigations?earliest=-24h%40h&latest=now)
 
