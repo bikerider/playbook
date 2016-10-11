@@ -9,7 +9,7 @@ The following dashboard can be queried to check the evolution of the provisionin
 Example:
 ![Brazil provisioning dashboard](images/provision_brazil.png)
 
-See also [Provisioning flow in Brazil dashboard explanation](../../reportdata/Provisioning_dashboard_explanation.md) 
+See also [Provisioning flow dashboard explanation](../../reportdata/Provisioning_dashboard_explanation.md) 
 
 
 
