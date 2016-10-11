@@ -6,4 +6,7 @@ The following dashboard shows the relevant information about the provisioning pr
 
 [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/nwc_prov?earliest=-60m%40m&latest=now) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/nwc_prov?earliest=-60m%40m&latest=now)
 
-{% markdown NWC_Provisioning_dashboard_explanation.md %}
+Example:
+![Brazil NWC provisioning dashboard](images/nwc_provision_brazil.png)
+
+See also [NWC Provisioning flow in Brazil dashboard explanation](../../reportdata/NWC_Provisioning_dashboard_explanation.md) 
