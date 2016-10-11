@@ -9,4 +9,7 @@ The following dashboard can be queried to check the evolution of the provisionin
 Example:
 ![provision_mexico](images/provision_mexico.png)
 
-See also Provisioning_dashboard_explanation.md
+See also [Provisioning flow dashboard explanation](../../reportdata/Provisioning_dashboard_explanation.md) 
+
+
+
