@@ -9,4 +9,4 @@ The following dashboard shows the relevant information about the provisioning pr
 Example:
 ![Brazil NWC provisioning dashboard](images/nwc_provision_brazil.png)
 
-See also [NWC Provisioning flow in Brazil dashboard explanation](../../reportdata/NWC_Provisioning_dashboard_explanation.md) 
+See also [NWC Provisioning flow dashboard explanation](../../reportdata/NWC_Provisioning_dashboard_explanation.md) 
