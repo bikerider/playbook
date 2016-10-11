@@ -10,7 +10,7 @@
   * [TU App originated message](AR_app_originated_sms_intro.md)
 
 ## TU terminated message
- * [TU Incoming message]()
-
+ * [TU Incoming message](AR_incoming_sms_intro.md)
+ 
 ## Provisioning
   * [TU Provisioning flow](AR_provisioning_intro.md)
