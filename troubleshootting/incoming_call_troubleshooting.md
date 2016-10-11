@@ -81,7 +81,7 @@ When troubleshooting specific calls, these are the steps that can be followed:
 
 #### STEP 1
 
-For the app originated flow, the first place to review the call is Voipmonitor [IP Based link](http://10.253.0.169/index.php) / [URL Based link](http://voipmonitor/index.php).
+For the app incoming flow, the first place to review the call is Voipmonitor [IP Based link](http://10.253.0.169/index.php) / [URL Based link](http://voipmonitor/index.php).
 
 A basic manual for this tool can be found [here](voipmonitor_tutorial_intro.md).
 
