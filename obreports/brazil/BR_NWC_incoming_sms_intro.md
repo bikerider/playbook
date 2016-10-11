@@ -10,3 +10,9 @@ The following dashboards can be used to monitor the performance of the NWC incom
 {% include Embed_TEEN_BR_Outgoing_NWC_Message_CDRs.html %}
 
 {% markdown App_Orig_NWC_message_resultCodes_explanation.md %}
+
+
+Example:
+![Embed_TEEN_BR_Outgoing_NWC_Message_CDRs](images/Embed_TEEN_BR_Outgoing_NWC_Message_CDRs.png)
+
+See also [Incoming NWC message Result Codes explanation](../../reportdata/App_Orig_NWC_message_resultCodes_explanation.md) 
