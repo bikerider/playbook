@@ -25,7 +25,7 @@ With gBE logs we can *in real time* check if calls are notified to gBE ("CalledN
 
 2 options here:
  * Calls are NOT notified to gBE:
- ** There has to be a problem in gCOB, that is not working fine or the OB has some problem in their network and gCOB is not able to notify the calls to gBE. In case the deployment in the OB has rSDP for call notifications, the problem can be in rSDP also (or connectivity between gCOB and gBE/rSDP).
+ ** There has to be a problem in gCOB, that is not working fine or the OB has some problem in their network and gCOB is not able to notify the calls to gBE. ** In case the deployment in the OB includes rSDP for call notifications, the problem can be in rSDP also (or connectivity between gCOB and gBE/rSDP).
  * Calls are notified to gBE but the calls are not getting to TUCore: see following step.
  
 ####  Step 2 -> Check why calls are getting to gCOB (and notified to gBE), but they are not getting to TUCore.
