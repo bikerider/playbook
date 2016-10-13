@@ -58,10 +58,10 @@ Other problems that could be causing the traffic decrease, can be:
 * Problems in the OB
 * Sip peering between the OB SBC and TUCore SBC.
 
-If the calls are getting to TUCore SBC, but can not be answered in the applications, the problem has to be somewhere in TUCore and we should use "Voipmonitor" [IP based link](http://10.253.0.169/index.php) / [Domain based link](http://voipmonitor/index.php) tool to debug.
+If the calls are getting to TUCore SBC, but can not be answered in the applications, the problem has to be somewhere in TUCore and we should use "Voipmonitor" [Link based on IP](http://10.253.0.169/index.php) / [Link based on domain](http://voipmonitor/index.php) tool to debug.
 
 
-## INTERESTING LINKS FOR INCOMING CALL TROUBLESHOOTING
+## OTHER USEFUL LINKS FOR INCOMING CALL TROUBLESHOOTING
 
 When investigating some problem in incoming calls, there's a Splunk report called "Call investigation V2" under *Troubleshoot* section [Link based on IP](https://10.253.1.11/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now) / [Link based on Domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/call_investigations_v2?earliest=-24h%40h&latest=now)
 
