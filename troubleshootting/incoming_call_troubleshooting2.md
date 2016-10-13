@@ -41,15 +41,15 @@ If the dispatches are getting to gCOB and the amount of "Route SIP" is the corre
 
 * Check the domain transfer errors:
 
- ** In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors)
+  ** In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_transfer_errors)
  
- ** In ARG [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_transfer_errors) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_transfer_errors)
+  ** In ARG [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_transfer_errors) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_transfer_errors)
  
 * Check the domain transfer delays:
 
- **In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area)
+  **In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_Domain_tranfer_delay_per_area)
  
- **In ARG [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_tranfer_delay_per_area) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_tranfer_delay_per_area)
+  **In ARG [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_tranfer_delay_per_area) / [Link based on domain](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_Domain_tranfer_delay_per_area)
 
 The domain transfer process is the mechanism we used, based on a prefix configured in the OB network, to convert the incoming call from Camel control dialog into SIP (to perform the forking of the call to the GSM network and to the apps). In case the domain transfer procedure is not working (or it's taking too long to happen) there will be no calls sent to TUCore.
 
