@@ -12,8 +12,7 @@ The typical problem in incoming call flow is that there is a decrease in the inc
 
  * In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes) / [Link based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes)
  
- * In ARG [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_CDRs_resultcodes) / [Link based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_ARG_Incoming_call_CDRs_resultcodes)
- 
+ * In ARG [Link to dashboard based on IP](https://10.253.1.11/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes) / [Link to dashboard based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?sid=1466086202.183726.mia-spl-sch02&s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_AR_Incoming_call_CDRs_resultcodes) 
 
 The proposed troubleshooting procedure is the following one:
 
