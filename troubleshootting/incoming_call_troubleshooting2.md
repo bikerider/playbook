@@ -8,7 +8,8 @@ This document describes the basic operations troubleshooting procedure for the i
 
 The typical problem in incoming call flow is that there is a decrease in the incoming call getting to TUCore.
 
-* Check the gCOB CDR results for incoming call in BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes) / [Link based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes)
+* Check the gCOB CDR results for incoming call.
+** In BR [Link based on IP](https://10.253.1.11/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes) / [Link based on URL](https://mia-splunk.tefcomms.com/en-US/app/tugo/report?s=%2FservicesNS%2Fnobody%2Ftugo%2Fsaved%2Fsearches%2FTEEN_BR_Incoming_call_CDRs_resultcodes)
 
 The proposed troubleshooting procedure is the following one:
 
